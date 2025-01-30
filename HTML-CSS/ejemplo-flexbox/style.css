@@ -1,0 +1,21 @@
+.elemento-padre {
+  background-color: beige;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+}
+
+button {
+  font-size: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+p {
+  font-size: 20px;
+  padding: 20px;
+  margin: 20px;
+}

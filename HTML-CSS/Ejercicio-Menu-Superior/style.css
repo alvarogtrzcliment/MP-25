@@ -1,0 +1,21 @@
+#contenedor-padre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  align-items: center;
+  height: 40px;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: aquamarine;
+  }
+}
+
+body {
+  margin: 0;
+}
