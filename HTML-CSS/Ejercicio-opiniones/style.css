@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height:100vh;
+}
+
+.contenedor-azul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & .contenedor-rojo{
+        margin: 20px;
+        & img{
+            width:150px
+        }
+    }
+
+    & .contenedor-verde{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+
+        & p{
+            font-size: 15px;
+            margin:10px
+        }
+
+        & h3{
+            margin:10px;
+            font-size: 20px;
+        }
+
+        & .contenedor-naranja{
+            & button{
+                padding: 10px;
+                border-radius: 10px;
+                border:dotted;
+                border-color:gray;
+                border-width:1px;
+            }
+
+            & #boton-presupuesto{
+                background-color: rgb(58, 58, 58);
+                color:rgb(238, 238, 238);
+            }
+        }
+    }
+
+    & .contenedor-rosa{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin:30px;
+
+        & .contenedor-celeste{
+            width:150px
+        }
+
+        & #nota{
+            padding: 15px;
+            background-color: rgb(172, 172, 172);
+            border-radius: 10px;
+            margin:15px;
+        }
+
+        
+    }
+}

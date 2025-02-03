@@ -1,22 +1,41 @@
-body {
+body{
+  width: 100vw;
+  height: 100vh;
   margin: 0;
 }
 
-.contenedor-abuelo {
+.contenedor-abuelo{
   display: flex;
   flex-direction: row;
-  height: 100vh;
-}
+  height: 100%;
+  width: 100%;
 
-.contenedor-padre {
-  background-color: rgb(115, 196, 112);
-  width: 30%;
 
-  display: flex;
-  flex-direction: column;
+  & .menu-lateral{
+    background-color: rgb(92, 164, 92);
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
 
-  & a {
-    padding: 10px;
-    text-decoration: none;
+    & a{
+      padding: 20px;
+      font-size: 1.5em;
+      color: rgb(222, 222, 222);
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    & a:hover{
+      background-color: rgb(50, 70, 50);  
+    }
+
+
+  }
+
+  & .contenido{
+    width: 75%;
   }
 }
+
