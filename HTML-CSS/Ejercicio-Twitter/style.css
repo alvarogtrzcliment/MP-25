@@ -1,0 +1,104 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-twitter{
+    background-color: rgb(241, 241, 241);
+    width: 70%;
+
+    box-shadow: 0px 0px 57px -9px rgba(52, 69, 70, 0.75);
+    border-radius: 15px;
+    border-style:solid;
+    border-color: rgb(127, 195, 255);
+
+    & .post-usuario{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        & .usuario-foto{
+            margin: 20px;
+
+            & img{
+                width: 100px;
+                border-radius: 50%;
+            }
+        }
+
+        & .usuario-texto{
+
+            width: 100%;
+            
+            & h2{
+                font-size: large;
+                margin:0px;
+            }
+
+            & p{
+                font-size: small;
+                color:gray;
+                margin:0px;
+            }
+
+        }
+
+        & .usuario-ver-mas{
+            margin: 20px;
+            cursor: pointer;
+            & img{
+                width:30px;
+            }
+        }
+        
+    }
+
+    & .post-texto{
+        margin-left: 20px;
+        margin-right: 20px;
+
+        & p{
+            text-align:justify;
+        }
+
+        & #fecha{
+            font-size: small;
+            color:gray;
+        }
+    }
+
+    & .post-estadisticas{
+        margin:20px;
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+        border-style:solid;
+        border-color:rgb(181, 181, 181);
+        border-width:1px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+
+        & p{
+            font-weight: bold;
+        }
+    }
+
+    & .post-interacciones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+
+        & a{
+            & img{
+                width:25px
+            }
+        }
+    }
+    
+}
