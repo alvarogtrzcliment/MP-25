@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadiendo-Capas</title>
+
+    <!-- Cargar la SDK -->
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.31/"></script>
+
+    <!-- Código CSS -->
+
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #viewDiv{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <!-- Código JS -->
+
+    <script defer>
+
+        require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer"],(Map, MapView, FeatureLayer) => {
+
+            const mapa = new Map({
+                basemap:'topo-vector'
+            })
+
+            const vistaMapa = new MapView({
+                container:'viewDiv',
+                map:mapa,
+                center:[-3.69,40.45],
+                zoom:13
+            })
+
+            const capaFL = new FeatureLayer({
+                url:'https://services1.arcgis.com/nCKYwcSONQTkPA4K/ArcGIS/rest/services/Hospitales/FeatureServer/0'
+            })
+
+            mapa.add(capaFL)
+
+            const capaPlayasFl = new FeatureLayer({
+                url:'https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/Playas_2015/FeatureServer/0'
+            })
+
+            mapa.add(capaPlayasFl)
+
+
+        }) 
+
+    </script>
+
+</head>
+<body>
+    <div id="viewDiv"></div>
+</body>
+</html>
