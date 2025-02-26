@@ -25,7 +25,7 @@ require([
   })
 
   const functionRasterColorMap = rasterFunctionUtils.colormap({
-    colorRampName: 'red-to-green',
+    colorRampName: 'NDVI3',
     raster: funcionRasterNDVI
   })
 

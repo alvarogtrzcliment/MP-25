@@ -1,0 +1,36 @@
+#AplicacionArcGIS {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: center;
+
+  margin: 20px;
+  border-radius: 20px;
+
+  background-color: rgb(196, 247, 225);
+
+  & img {
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+  }
+
+  & p {
+    text-align: justify;
+  }
+
+  & button {
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(123, 180, 177);
+    border-width: 0;
+    cursor: pointer;
+  }
+}
+
+#lista-ejemplos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
