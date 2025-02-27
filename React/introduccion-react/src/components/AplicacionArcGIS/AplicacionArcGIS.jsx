@@ -59,6 +59,3 @@ function AplicacionArcGIS ({ logoLink, titulo, descripcion, enlace, altImagen })
 
 export default AplicacionArcGIS
 
-function suma(n1,n2){
-  const [asda,setasda] = useState(hola)
-}
