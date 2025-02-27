@@ -2,12 +2,17 @@
 
 import './AplicacionArcGIS.css'
 import CartaEjemplo from '../CartaEjemplo/CartaEjemplo'
+import { useState } from 'react'
 
 function AplicacionArcGIS ({ logoLink, titulo, descripcion, enlace, altImagen }) {
 
   let ejemplos
 
-  if(titulo === 'ArcGIS Experience Builder' ){
+  const [estadoBoton, setEstadoBoton] = useState(false)
+
+  console.log('Se ha cargado el componente', estadoBoton)
+
+  if(titulo === 'ArcGIS Experience Builder' && estadoBoton === true){
     ejemplos = <>
         <CartaEjemplo linkImagen={'https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGIS_Experience_Builder_220.png'} titulo={'Ejemplo 1'} descripcion={'Descripción de mi ejemplo'}></CartaEjemplo>
         <CartaEjemplo linkImagen={'https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGIS_Experience_Builder_220.png'} titulo={'Ejemplo 2'} descripcion={'Descripción de mi ejemplo'}></CartaEjemplo>
@@ -15,12 +20,21 @@ function AplicacionArcGIS ({ logoLink, titulo, descripcion, enlace, altImagen })
     </>
   }
 
-  if(titulo === 'ArcGIS Story Maps' ){
+  if(titulo === 'ArcGIS Story Maps' && estadoBoton === true){
     ejemplos = <>
         <CartaEjemplo linkImagen={'https://storymaps.arcgis.com/static/images/logo.png?v=24.16-0416'} titulo={'Ejemplo 1'} descripcion={'Descripción de mi Ejemplo'}></CartaEjemplo>
         <CartaEjemplo linkImagen={'https://storymaps.arcgis.com/static/images/logo.png?v=24.16-0416'} titulo={'Ejemplo 2'} descripcion={'Descripción de mi Ejemplo'}></CartaEjemplo>
         <CartaEjemplo linkImagen={'https://storymaps.arcgis.com/static/images/logo.png?v=24.16-0416'} titulo={'Ejemplo 3'} descripcion={'Descripción de mi Ejemplo'}></CartaEjemplo>
     </>
+  }
+
+  function buttonHandler(eventoClick){
+    console.log(estadoBoton)
+    if(estadoBoton === false){
+      setEstadoBoton(true)
+    }else{
+      setEstadoBoton(false)
+    }
   }
 
   return(
@@ -31,7 +45,7 @@ function AplicacionArcGIS ({ logoLink, titulo, descripcion, enlace, altImagen })
           <h1>{titulo}</h1>
           <p>{descripcion}</p>
           <a href={enlace}>Enlace a la página de producto</a>
-          <button>Ver Ejemplos</button>
+          <button onClick={buttonHandler}>Ver Ejemplos</button>
         </div>
       </div>
 
@@ -44,3 +58,7 @@ function AplicacionArcGIS ({ logoLink, titulo, descripcion, enlace, altImagen })
 }
 
 export default AplicacionArcGIS
+
+function suma(n1,n2){
+  const [asda,setasda] = useState(hola)
+}
