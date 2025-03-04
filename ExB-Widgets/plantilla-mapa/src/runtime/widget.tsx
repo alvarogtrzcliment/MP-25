@@ -2,10 +2,13 @@ import { React, type AllWidgetProps } from 'jimu-core'
 import { type IMConfig } from '../config'
 import './widget.css'
 import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
+import { useState } from 'react'
 
 const Widget = (props: AllWidgetProps<IMConfig>) => {
+  const [vistaActiva, setVistaActiva] = useState<JimuMapView>()
+
   function activeViewHandler(jmv: JimuMapView) {
-    console.log(jmv)
+    setVistaActiva(jmv)
   }
 
   return (

@@ -1,0 +1,22 @@
+.info-mapa {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+
+  & .resto-info {
+    & .tags {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      & .tag {
+        background-color: rgb(118, 118, 215);
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}
